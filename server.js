@@ -41,6 +41,7 @@ io.on("connection", socket => {
         if(players[socket.id]){
             players[socket.id].msg = msg;
             io.emit("UpdatePlayers", players);
+            io.emit(console.log(socket.msg));
             setTimeout(() => {
                 if(players[socket.id]){
                     players[socket.id].msg = "";
@@ -55,7 +56,10 @@ io.on("connection", socket => {
 
 });
 
-
+socket.on("disconnect", () => {
+    delete players[socket.id];
+    io.emit("UpdatePlayers", players);
+} )
 
 
 server.listen(3000, () => console.log("ouvindo ...") )
