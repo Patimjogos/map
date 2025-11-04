@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #222;
+}
+
+#game {
+  display: block;
+  margin: 0 auto;
+  background: #333;
+}
+
+#chat-box {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#msg {
+  width: 200px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+.hidden {
+  display: none;
+}
