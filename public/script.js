@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io("https://map-aqxy.onrender.com");
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 const chatBox = document.getElementById("chat-box");
